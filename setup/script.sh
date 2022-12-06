@@ -7,6 +7,12 @@
 echo "Bienvenue dans le script d'installation de l'environnement de travail pour Tek-it-Izi"
 echo "Veuillez patienter pendant l'installation de l'environnement de travail"
 
+wget https://raw.githubusercontent.com/Alaixs/PKWebsite/master/setup/collabos.csv
+
+sleep 2
+
+echo "Fichier bien téléchargé, début de l'installation des dépendances..."
+
 echo -ne '[                          ](0%)\r'
 #Update system
 sudo apt-get update &> logs.txt
