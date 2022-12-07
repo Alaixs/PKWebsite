@@ -5,33 +5,26 @@
 #!/bin/bash
 
 echo "Bienvenue dans le script d'installation de l'environnement de travail pour Tek-it-Izi"
-echo "Veuillez patienter pendant l'installation de l'environnement de travail"
+echo "Veuillez patienter pendant l'installation de l'environnement de travail..."
 
-wget https://raw.githubusercontent.com/Alaixs/PKWebsite/master/setup/collabos.csv
+sleep 5
 
-sleep 2
+wget https://raw.githubusercontent.com/Alaixs/PKWebsite/master/setup/script.sh
 
-echo "Fichier bien téléchargé, début de l'installation des dépendances..."
 
-echo -ne '[                          ](0%)\r'
 #Update system
-sudo apt-get update &> logs.txt
-echo -ne '[#####                     ](20%)\r'
-sudo apt-get upgrade &> logs.txt
-echo -ne '[#############             ](52%)\r'
+sudo apt-get update 
+
+sudo apt-get -y upgrade
 
 #Install firefox browser
-sudo apt-get install -y firefox &> logs.txt
-echo -ne '[###############           ](60%)\r'
+sudo apt-get install -y firefox
 
 #Install git
-sudo apt-get install -y git &> logs.txt
-echo -ne '[##################        ](70%)\r'
+sudo apt-get install -y git 
 
 #Install vscode
-sudo snap install --classic code &> logs.txt
-echo -ne '[#####################     ](80%)\r'
-
+sudo apt install code
 
 sudo groupadd CHEFS
 sudo install -d -m 0770 -g CHEFS "/home/partageChefs"
@@ -71,6 +64,7 @@ sudo mkdir -m 0777 "/home/partageTous"
     done 
 } < collabos.csv
 
-echo -ne '[##########################](100%)\r'
-echo "Script is done"
+clear
+
+echo "Script fini il n'y a eu aucune erreur.'"
 
