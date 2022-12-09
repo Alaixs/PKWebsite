@@ -66,5 +66,5 @@ sudo mkdir -m 0777 "/home/partageTous"
 
 clear
 
-echo "Script fini il n'y a eu aucune erreur.'"
+echo "✅ Script fini il n'y a eu aucune erreur ✅"
 
