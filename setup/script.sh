@@ -2,12 +2,14 @@
 #Par Duprat Dorian et Piekarz Alexis
 #Date: 27/11/2022
 #Description: Script d'installation de l'environnement de travail pour Tek-it-Izi complétement automatisé
-#Version: 1.6
+#Version: 1.8
 
 echo "Bienvenue dans le script d'installation de l'environnement de travail pour Tek-it-Izi"
 echo "Veuillez patienter pendant l'installation de l'environnement de travail"
 
 wget https://raw.githubusercontent.com/Alaixs/PKWebsite/master/setup/collabos.csv
+
+clear
 
 #Update system
 sudo apt-get update 
@@ -21,7 +23,7 @@ sudo apt-get install -y firefox
 sudo apt-get install -y git 
 
 #Install vscode
-sudo apt install code
+sudo apt install -y code
 
 sudo groupadd CHEFS
 sudo install -d -m 0770 -g CHEFS "/home/partageChefs"
