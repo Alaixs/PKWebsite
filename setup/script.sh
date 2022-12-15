@@ -17,7 +17,7 @@ sudo apt-get update
 sudo apt-get -y upgrade
 
 #Install firefox browser
-sudo apt-get install -y firefox
+sudo apt-get install -y firefox-esr
 
 #Install git
 sudo apt-get install -y git 
