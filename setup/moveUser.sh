@@ -13,6 +13,6 @@ do
   if [ ! -z "$group" ]
   then
     # Déplacer le dossier de l'utilisateur dans le dossier du groupe
-    mv /home/$user /home/$group/$user
+    mv /home/$user /home/$group
   fi
 done
